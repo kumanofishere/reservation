@@ -113,6 +113,8 @@ function drawTimeAxis() {
   ctx.textAlign = 'center';
 
   for (let h = startHour; h <= 24; h++) {
+    if (h === 9) continue; // 9時はスキップ
+    
     const x = leftMargin + (h - startHour) * widthPerHour;
     ctx.beginPath();
     ctx.lineWidth = (h === openHour || h === 21 || h === closeHour) ? 1 : 0.5;
@@ -198,4 +200,5 @@ updateCalendar();
 
 </body>
 </html>
+
 

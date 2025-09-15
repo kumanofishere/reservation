@@ -184,9 +184,10 @@ function updateCalendar() {
       }
 
       seats.forEach((seat, i) => {
-        const y = i * rowHeight + rowPadding + 20; const seatRes = todaysRes.filter(r => r.seat === seat && r.start !== null && r.end !== null) .sort((a,b) => a.start - b.start);
-
-        
+        const y = i * rowHeight + rowPadding + 20; 
+        const seatRes = todaysRes.filter(r => r.seat === seat && r.start !== null && r.end !== null) 
+                                  .sort((a,b) => a.start - b.start);
+       
         seatRes.forEach(r => {
           drawRoundedRect(
             leftMargin + (r.start - 9) * (canvas.width - leftMargin) / 15,
@@ -212,6 +213,7 @@ updateCalendar();
 
 </body>
 </html>
+
 
 
 

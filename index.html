@@ -8,14 +8,27 @@
   body { font-family: 'Zen Maru Gothic', sans-serif; margin: 20px; }
   .canvas-container {
     overflow-x: auto;
-    border: 1px solid #ccc;
+    border: none;
   }
   canvas { display: block; width: 100%; height: auto; }
   button { margin: 0 5px; }
   #currentDateInput {
+    border: none;
     font-size: 16px;
     padding: 3px 5px;
     margin-left: 5px;
+  }
+  button:focus{
+    outline: none;
+  }
+    #currentDateInput {
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 3px 5px;
+  }
+  #currentDateInput:focus {
+    outline: none;
   }
 </style>
 </head>
@@ -26,7 +39,8 @@
 <div style="margin-bottom: 10px;">
   <button id="prevDay">&lt; 前日</button>
   <input type="date" id="currentDateInput">
-  <button id="nextDay">次日 &gt;</button>
+    <span id="currentDayOfWeek"></span>
+  <button id="nextDay">翌日 &gt;</button>
   <span id="currentDayOfWeek" style="margin-left:10px;"></span>
 </div>
 
@@ -200,5 +214,6 @@ updateCalendar();
 
 </body>
 </html>
+
 
 

@@ -89,6 +89,7 @@ document.getElementById('nextDay').addEventListener('click', () => {
 
 function resizeCanvas() {
   canvas.width = canvas.parentElement.clientWidth;
+  canvas.height = rowHeight * seats.length + 40;
 }
 
 window.addEventListener('resize', () => {
@@ -213,6 +214,7 @@ updateCalendar();
 
 </body>
 </html>
+
 
 
 

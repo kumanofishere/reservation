@@ -131,8 +131,8 @@ function drawTimeAxis() {
     
     const x = leftMargin + (h - startHour) * widthPerHour;
     ctx.beginPath();
-    ctx.lineWidth = (h === openHour || h === 21 || h === closeHour) ? 1 : 0.5;
-    ctx.strokeStyle = (h === 21) ? 'orange' : '#bbb';
+    ctx.lineWidth = (h === openHour || h === 20 || h === closeHour) ? 1 : 0.5;
+    ctx.strokeStyle = (h === 20) ? 'orange' : '#bbb';
     ctx.moveTo(x, 20);
     ctx.lineTo(x, rowHeight * seats.length + 20);
     ctx.stroke();
@@ -214,6 +214,7 @@ updateCalendar();
 
 </body>
 </html>
+
 
 
 
